@@ -9,73 +9,67 @@
       margin: 0;
       padding: 20px;
       font-family: sans-serif;
+      color: white;
       text-align: center;
     }
 
-    .header {
-      background: #4FC3F7; /* приятный голубой */
+    .header, .footer {
+      background: #4FC3F7;
       padding: 50px;
       border-radius: 10px;
-      color: #fff;
-      text-align: center;
       margin-bottom: 20px;
+    }
+
+    .footer {
+      background: #082858;
     }
 
     .puzzle {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 10px;
-      margin-bottom: 20px;
+      align-items: center;
     }
-     
 
+    .row {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
 
     .long-left {
-        height: 100px;
-        width: 80%;
-        background-color:#e53935;
-        border-radius: 10px;
+      width: 80%;
+      height: 100px;
+      background-color: #e53935;
+      border-radius: 10px;
     }
 
     .short-right {
-        background-color: #fdd835;
-        width: 19%;
-        border-radius: 10px;
+      width: 19%;
+      height: 100px;
+      background-color: #fdd835;
+      border-radius: 10px;
     }
 
     .big-left {
-      background: #e53935; /* красный */
-      width: 400px;
+      width: 30%;
       height: 300px;
+      background: #e53935;
       border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .right {
-      flex: 1;
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .right > div {
-      border-radius: 10px;
-    }
-
-
-    .box {
-      background: #17dc48; /* голубой */
       width: 100%;
+      flex-direction: column;
     }
-
-    .footer {
-      background: #082858; /* тёмно-синий */
-      padding: 60px;
+    .box {
+      width: 100%;
+      height: 145px;
+      background: #17dc48;
       border-radius: 10px;
-      color: #fff;
-      text-align: center;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -84,14 +78,17 @@
   <div class="header">Хедер</div>
 
   <div class="puzzle">
-  
-    <div class="long-left"></div>
-    <div class="short-right"></div>
-   
-    <div class="big-left"></div>
-    <div class="right">
+    <div class="row">
+      <div class="long-left"></div>
+      <div class="short-right"></div>
+    </div>
+
+    <div class="row">
+      <div class="big-left"></div>
+      <div class="right">
+        <div class="box"></div>
       <div class="box"></div>
-      <div class="box"></div>
+      </div>
     </div>
   </div>
 
